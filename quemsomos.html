@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quem Somos | Canto Bravo</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #f8f8f5 url("background.png") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Georgia", "Times New Roman", serif;
+      color: #3b302a;
+      text-align: center;
+    }
+
+    .container {
+      margin-top: 50px; /* subiu o conteúdo */
+      max-width: 800px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #005f73;
+      margin-bottom: 15px;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 1.05rem;
+    }
+
+    .video-container {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    video {
+      width: 90%;
+      max-width: 700px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .voltar-container {
+      margin: 30px 0 30px 0;
+    }
+
+    a.voltar {
+      color: #e0e0e0;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      background: rgb(7, 80, 99);
+      padding: 10px 20px;
+      border-radius: 6px;
+      transition: background 0.2s ease;
+    }
+
+    a.voltar:hover {
+      background: rgba(255,255,255,0.9);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Quem Somos?</h1>
+    <p>
+      Inaugurado em 1994, na praia da Martin de Sá, em Caraguatatuba-SP, o Quiosque Canto Bravo nasceu à beira-mar com o propósito
+      de oferecer boa comida, coquetéis de outro nível e um ambiente extremamente agradável e acolhedor.
+    </p>
+
+    <div class="video-container">
+      <video controls>
+        <source src="videosobrenos.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos em HTML5.
+      </video>
+    </div>
+  </div>
+
+  <div class="voltar-container">
+    <a class="voltar" href="index.html">← Voltar</a>
+  </div>
+</body>
+</html>
