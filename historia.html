@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa História - Canto Bravo Quiosque</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Estilos específicos para a página de História */
+        .history-content {
+            padding: 100px 0 50px;
+            color: #fff;
+        }
+
+        .history-content h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: #f7a01d;
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .history-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 80px;
+            padding: 40px;
+            background-color: #0d1e31;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .history-section:nth-child(even) {
+            flex-direction: row-reverse; /* Inverte a ordem para efeito de scroll */
+        }
+        
+        .history-section img {
+            max-width: 40%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            margin: 0 30px;
+        }
+        
+        .history-section .text-block {
+            max-width: 55%;
+        }
+
+        .history-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            font-size: 2em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f7a01d;
+            padding-bottom: 5px;
+        }
+
+        .history-section p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #ccc;
+        }
+        
+        @media (max-width: 768px) {
+            .history-section, 
+            .history-section:nth-child(even) {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .history-section img {
+                max-width: 100%;
+                margin: 20px 0;
+            }
+            
+            .history-section .text-block {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logocb.png" alt="Logo Canto Bravo Quiosque de Praia">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Ínicio</a></li>
+                    <li><a href="cardapio.html">Cardápio</a></li>
+                    <li><a href="#" id="openPhoneModalNav">Contato</a></li>
+                    <li><a href="https://www.google.com/maps/place/Quiosque+Canto+Bravo/@-23.6314674,-45.3859397,17z/data=!3m1!4b1!4m6!3m5!1s0x94cd63cdd5bedbaf:0x7c41cc0a9f257c31!8m2!3d-23.6314674!4d-45.3859397!16s%2Fg%2F1ptx1bxfr!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MTEwMi4wIKXMDSoASAFQAw%3D%3D">Localização</a></li>
+                    <li><a href="historia.html">Nossa História</a></li>
+                </ul>
+            </nav>
+            <div class="header-info">
+                <p><i class="fas fa-phone"></i> <a href="tel:+551238822367">(12) 3882-2367</a></p>
+                <a href="#" class="search-icon"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="history-content container">
+        <h1>Quem Nós Somos?</h1>
+
+        <div class="history-section">
+            <img src="quiosquecb.jpg" alt="Foto do Quiosque Canto Bravo na praia">
+            <div class="text-block">
+                <h2>Uma Visão à Beira-Mar</h2>
+                <p>
+                    A história do Canto Bravo começa em 1994, com um sonho simples: oferecer o melhor da culinária caiçara e o mais alto nível de atendimento na deslumbrante Praia da Martim de Sá, em Caraguatatuba. Este quiosque não é apenas um ponto de parada, mas sim um destino, focado em criar experiências memoráveis para todos os seus visitantes.
+                </p>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <img src="arisimone.jpeg" alt="Foto dos proprietários Ari e Simone">
+            <div class="text-block">
+                <h2>A Família por Trás da Qualidade</h2>
+                <p>
+                    O Canto Bravo é o resultado da paixão e dedicação de Ari Barbosa, o proprietário, que desde o primeiro dia se empenhou em garantir que cada prato e cada drink fossem de qualidade impecável. Ao seu lado, sempre esteve sua esposa, Simone Cesário. Juntos, eles construíram não apenas um negócio, mas uma família que trata cada cliente como um convidado especial.
+                </p>
+                <p>
+                    Ari e Simone estabeleceram o atendimento de alto nível como a marca registrada do quiosque, garantindo que você aproveite o sol e o mar com o máximo de conforto e excelência.
+                </p>
+            </div>
+        </div>
+        
+        <div class="history-section">
+            <div class="text-block" style="max-width: 100%;">
+                <h2>Nossa Missão: Excelência Contínua</h2>
+                <p>
+                    Mais de duas décadas depois, a essência do Canto Bravo permanece a mesma: proporcionar a combinação perfeita entre frutos do mar frescos, coquetelaria de ponta e um ambiente acolhedor. Nosso foco é e sempre será no melhor atendimento possível, transformando um simples dia de praia em uma experiência gastronômica e de lazer inesquecível.
+                </p>
+                <p>
+                    Venha fazer parte da nossa história!
+                </p>
+            </div>
+        </div>
+        
+    </main>
+    
+    <div id="phoneModal" class="call-modal">
+        <div class="modal-content">
+            <span class="close-btn-phone">×</span>
+            <h2>Entre em contato!</h2>
+            <p>Retirada de pedidos somente no local.</p>
+            <a href="tel:+551238822367" class="btn btn-primary call-now-btn">
+                <i class="fas fa-phone-alt"></i> (12) 3882-2367
+            </a>
+            <p class="small-text">Toque no número acima para ligar.</p>
+        </div>
+    </div>
+
+    <footer id="contato">
+        <div class="container footer-grid">
+            
+            <div class="footer-col footer-info">
+                <h3>CANTO BRAVO</h3>
+                <p>O melhor quiosque de Caraguatatuba! Atendimento em mesa e pratos frescos na Praia da Martim de Sá.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/quiosque_canto_bravo/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/quiosquecantobravo" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col footer-contact">
+                <h3>Contate-nos</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Doutor Aldino Schiavi, 50 - Martim de Sá, Caraguatatuba - SP</p>
+                <p><i class="fas fa-phone"></i> Telefone Fixo: <a href="tel:+551238822367">(12) 3882-2367</a></p>
+                <p><i class="fas fa-clock"></i> Horário: Diariamente das 10h às 18h</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Canto Bravo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> 
+
+</body>
+</html>
