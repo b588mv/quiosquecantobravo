@@ -22,7 +22,7 @@
                 <ul>
                     <li><a href="#">Ínicio</a></li>
                     <li><a href="cardapio.html">Cardápio</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#" id="openPhoneModalNav">Contato</a></li>
                     <li><a href="https://www.google.com/maps/place/Quiosque+Canto+Bravo/@-23.6314674,-45.3859397,17z/data=!3m1!4b1!4m6!3m5!1s0x94cd63cdd5bedbaf:0x7c41cc0a9f257c31!8m2!3d-23.6314674!4d-45.3859397!16s%2Fg%2F1ptx1bxfr!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MTEwMi4wIKXMDSoASAFQAw%3D%3D">Localização</a></li>
                     <li><a href="#sobrenos">Sobre Nós</a></li>
                 </ul>
@@ -104,6 +104,52 @@
             <p>© 2025 Canto Bravo. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <div id="phoneModal" class="call-modal">
+        <div class="modal-content">
+            <span class="close-btn-phone">&times;</span>
+            <h2>Entre em contato!</h2>
+            <p>Retirada de pedidos somente no local.</p>
+            <a href="tel:+551238822367" class="btn btn-primary call-now-btn">
+                <i class="fas fa-phone-alt"></i> (12) 3882-2367
+            </a>
+            <p class="small-text">Toque no número acima para ligar.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+
+</body>
+</html>
+
+<head>
+    <link rel="stylesheet" href="style.css"> 
+    
+    <style>
+    .call-modal {
+        position: fixed !important; /* Força a posição */
+        z-index: 500; 
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8); 
+    }
+    
+    .call-modal .modal-content {
+        background-color: #0d1e31; 
+        color: #fff;
+        margin: 15% auto; 
+        padding: 30px;
+        border-radius: 8px;
+        width: 90%; 
+        max-width: 400px; 
+        text-align: center;
+        position: relative;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    }
+    </style>
+    </head>
 
 </body>
 
