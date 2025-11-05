@@ -433,3 +433,185 @@ footer {
         margin-top: 20px;
     }
 }
+
+/* ---------------------------------------------------- */
+/* ESTILOS PARA O MODAL DE TELEFONE (Pop-up) */
+/* ---------------------------------------------------- */
+
+/* Base do Modal */
+.call-modal {
+    display: none; /* ISTO FAZ ELE INICIAR ESCONDIDO! */
+    position: fixed; 
+    z-index: 500; /* Garante que fique acima de tudo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8); /* Fundo semi-transparente escuro */
+    padding-top: 50px;
+}
+
+.call-modal .modal-content {
+    background-color: #0d1e31; /* Fundo escuro do quiosque */
+    color: #fff;
+    /* CENTRALIZAÇÃO E TAMANHO */
+    margin: 15% auto; 
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%; 
+    max-width: 400px; /* Limita o tamanho máximo da caixa */
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+}
+
+.close-btn-phone {
+    color: #f7a01d;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.close-btn-phone:hover,
+.close-btn-phone:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.call-modal h2 {
+    color: #f7a01d;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 15px;
+}
+
+.call-now-btn {
+    display: block;
+    width: 80%;
+    margin: 0 auto 20px;
+    padding: 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #f7a01d;
+    color: #0d1e31;
+    transition: background-color 0.3s;
+}
+
+.call-now-btn:hover {
+    background-color: #fff;
+}
+
+.small-text {
+    font-size: 0.8em;
+    color: #888;
+}
+
+/* ---------------------------------------------------- */
+/* ESTILOS PARA O MODAL DE TELEFONE (Pop-up) */
+/* ---------------------------------------------------- */
+
+/* Base do Modal */
+.call-modal {
+    display: none; /* ISTO É O QUE FAZ ELE INICIAR ESCONDIDO! */
+    position: fixed; 
+    z-index: 500; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8); /* Fundo semi-transparente escuro */
+    padding-top: 50px;
+}
+
+/* ---------------------------------------------------- */
+/* ESTILOS PARA O MODAL DE TELEFONE (Pop-up) */
+/* ---------------------------------------------------- */
+
+/* ---------------------------------------------------- */
+/* ESTILOS PARA O MODAL DE TELEFONE (Pop-up) */
+/* ---------------------------------------------------- */
+
+/* Base do Modal */
+.call-modal {
+    /* 🚨 ESTA LINHA É A ÚNICA RESPONSÁVEL POR ELE INICIAR ESCONDIDO! */
+    display: none; 
+    
+    /* Regras de fixação na tela (para que ele não vá para o final da página) */
+    position: fixed; 
+    z-index: 500; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8); /* Fundo semi-transparente escuro */
+    padding-top: 50px;
+}
+
+.call-modal .modal-content {
+    background-color: #0d1e31; 
+    color: #fff;
+    /* Centralização */
+    margin: 15% auto; 
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%; 
+    max-width: 400px; 
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+}
+
+.close-btn-phone {
+    color: #f7a01d;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.close-btn-phone:hover,
+.close-btn-phone:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.call-modal h2 {
+    color: #f7a01d;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 15px;
+}
+
+.call-now-btn {
+    display: block;
+    width: 80%;
+    margin: 0 auto 20px;
+    padding: 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #f7a01d;
+    color: #0d1e31;
+    transition: background-color 0.3s;
+}
+
+.call-now-btn:hover {
+    background-color: #fff;
+}
+
+.small-text {
+    font-size: 0.8em;
+    color: #888;
+}
