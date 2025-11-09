@@ -615,3 +615,56 @@ footer {
     font-size: 0.8em;
     color: #888;
 }
+
+/* ... (Seu código CSS anterior) ... */
+
+/* Estilos para o Menu de Destaque (continuação) */
+
+/* Contêiner dos botões de filtro */
+.menu-filters {
+    margin-bottom: 30px;
+}
+
+/* Estilo para os botões de filtro (abas) */
+.btn-tab {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #1a2b3d; /* Cor de fundo dos itens de menu */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-tab:hover {
+    background-color: #f7a01d;
+    color: #0b1a2a;
+}
+
+/* Estado ativo do botão */
+.btn-tab.active {
+    background-color: #f7a01d;
+    color: #0b1a2a;
+    pointer-events: none; /* Desativa o clique no botão já ativo */
+}
+
+/* Classe para esconder o conteúdo - ESSENCIAL PARA O JAVASCRIPT */
+.hidden {
+    display: none !important;
+}
+
+/* Estilos para o menu-item img (PARA RESOLVER O PROBLEMA DO TAMANHO) */
+.menu-item img {
+    max-width: 100%;
+    /* Adicionando limite de altura para uniformidade visual */
+    max-height: 180px; 
+    width: auto; /* Mantém a largura automática para se ajustar a max-height */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer, cortando se necessário */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* ... (Seu código CSS restante) ... */
