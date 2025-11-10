@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardápio Canto Bravo - Completo</title>
+    
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    
     <style>
         /* CSS simples para centralizar e garantir responsividade */
         body {
@@ -11,6 +18,12 @@
             text-align: center;
             padding: 20px;
         }
+        
+        /* Contêiner para centralizar o botão e dar espaço */
+        .back-button-container {
+            margin: 40px 0;
+        }
+
         img {
             max-width: 100%;
             height: auto;
@@ -18,18 +31,29 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
+            border-radius: 8px; /* Adiciona cantos arredondados nas imagens do cardápio */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
+        
         h1 {
             color: #fff;
             font-family: 'Montserrat', sans-serif;
+            margin-top: 60px; /* Mais espaço do topo */
             margin-bottom: 30px;
+            font-size: 2.5em;
         }
     </style>
 </head>
 <body>
-    <h1>Cardápio</h1>
+    <h1>Cardápio Completo</h1>
     <img src="menu1.png" alt="Cardápio Canto Bravo - Frente: Porções e Pratos">
     <img src="menu2.png" alt="Cardápio Canto Bravo - Verso: Drinks e Bebidas">
-    <a href="index.html" style="color: #f7a01d; text-decoration: none; font-size: 1.2em;">Voltar para o Quiosque</a>
+    
+    <div class="back-button-container">
+        <a href="index.html" class="btn btn-primary">
+            <i class="fas fa-home"></i> Voltar ao Início
+        </a>
+    </div>
+
 </body>
 </html>

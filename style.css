@@ -1,4 +1,3 @@
-/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +5,11 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif; /* Fonte para o corpo do texto */
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
-    color: #eee; /* Cor de texto padrão para fundo escuro */
-    background-color: #0b1a2a; /* Cor de fundo principal */
+    color: #eee;
+    background-color: #0b1a2a;
+    padding-top: 75px; 
 }
 
 .container {
@@ -18,11 +18,11 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
 .main-header {
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    background-color: rgba(0, 0, 0, 0.85); 
     padding: 15px 0;
-    position: absolute; /* Para flutuar sobre o banner */
+    position: fixed; 
+    top: 0;
     width: 100%;
     z-index: 100;
 }
@@ -34,9 +34,9 @@ body {
 }
 
 .logo img {
-    max-height: 45px; /* Tente 50px de altura para começar */
-    width: auto; /* Garante que a largura se ajuste automaticamente, mantendo a proporção */
-    display: block; /* Garante que se comporte bem dentro do link */
+    max-height: 45px;
+    width: auto;
+    display: block;
 }
 
 .main-nav ul {
@@ -56,7 +56,7 @@ body {
 }
 
 .main-nav ul li a:hover {
-    color: #f7a01d; /* Dourado/laranja para hover */
+    color: #f7a01d;
 }
 
 .header-info {
@@ -70,7 +70,6 @@ body {
     font-size: 0.9em;
 }
 
-.header-info .search-icon,
 .header-info .cart-icon {
     color: #fff;
     font-size: 1.2em;
@@ -79,15 +78,13 @@ body {
     transition: color 0.3s ease;
 }
 
-.header-info .search-icon:hover,
 .header-info .cart-icon:hover {
     color: #f7a01d;
 }
 
-/* Hero Banner */
 .hero-banner {
     background: url('backgroundquiosque.png') no-repeat center center/cover;
-    height: 70vh; /* Altura do banner */
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,7 +94,6 @@ body {
     z-index: 1;
 }
 
-/* Sobreposição escura no banner para o texto se destacar */
 .hero-banner::before {
     content: '';
     position: absolute;
@@ -105,7 +101,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Escurece a imagem de fundo */
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: -1;
 }
 
@@ -119,7 +115,7 @@ body {
 
 .hero-content .title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3.8em; /* Tamanho grande para o título */
+    font-size: 3.8em;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 30px;
@@ -155,12 +151,11 @@ body {
 
 .btn-secondary:hover {
     background-color: #fff;
-    color: #0b1a2a; /* Cor do texto no hover */
+    color: #0b1a2a;
 }
 
-/* Seção de Destaques (Features) */
 .features-section {
-    background-color: #0b1a2a; /* Fundo escuro */
+    background-color: #0b1a2a;
     padding: 60px 0;
     text-align: center;
 }
@@ -168,12 +163,12 @@ body {
 .features-section .container {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Para quebrar linha em telas menores */
+    flex-wrap: wrap;
     gap: 30px;
 }
 
 .feature-item {
-    flex-basis: 30%; /* Três itens por linha em telas maiores */
+    flex-basis: 30%;
     padding: 20px;
 }
 
@@ -195,11 +190,12 @@ body {
     font-size: 0.95em;
 }
 
-/* Seção de Destaque do Cardápio */
 .menu-highlight-section {
-    background-color: #0d1e31; /* Um tom ligeiramente mais claro que o fundo principal */
+    background-color: #0d1e31;
     padding: 80px 0;
     text-align: center;
+    position:relative;
+    overflow: hidden;
 }
 
 .menu-highlight-section .subtitle {
@@ -227,32 +223,39 @@ body {
 
 .menu-items-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivo com grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
 
 .menu-item {
-    background-color: #1a2b3d; /* Fundo para cada item do menu */
+    background-color: #1a2b3d;
     padding: 20px;
     border-radius: 8px;
-    text-align: left;
     transition: transform 0.3s ease;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
 }
 
 .menu-item:hover {
-    transform: translateY(-5px); /* Efeito sutil no hover */
+    transform: translateY(-5px);
 }
 
 .menu-item img {
     max-width: 100%;
+    max-height: 180px; 
+    width: auto;
+    object-fit: cover;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin: 15px auto;
 }
 
 .menu-item h4 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.3em;
-    color: #f7a01d; /* Título do prato */
+    color: #f7a01d;
     margin-bottom: 5px;
 }
 
@@ -269,8 +272,22 @@ body {
     color: #fff;
 }
 
-/* Media Queries para Responsividade */
+.fixed-corner-deco {
+    position: fixed; 
+    bottom: 0;      
+    left: 0;        
+    z-index: 50;    
+    max-width: 200px; 
+    height: auto;
+    pointer-events: none; 
+}
+
+
 @media (max-width: 768px) {
+    .fixed-corner-deco {
+        display: none; 
+    }
+    
     .header-content {
         flex-direction: column;
         text-align: center;
@@ -294,7 +311,7 @@ body {
     }
     .hero-buttons .btn {
         margin: 10px 0;
-        width: 80%; /* Botões ocupam mais largura em mobile */
+        width: 80%;
     }
     .features-section .container {
         flex-direction: column;
@@ -312,7 +329,7 @@ body {
         font-size: 1.5em;
     }
     .header-info span {
-        display: none; /* Esconde o telefone em telas muito pequenas */
+        display: none;
     }
     .hero-content .title {
         font-size: 2em;
@@ -321,10 +338,6 @@ body {
         font-size: 1.8em;
     }
 }
-
-/* ---------------------------------------------------- */
-/* ESTILOS BASE DO FOOTER (PARA TODAS AS TELAS) */
-/* ---------------------------------------------------- */
 
 footer {
     background-color: #0d1e31;
@@ -373,25 +386,10 @@ footer {
     text-decoration: none;
 }
 
-.footer-links ul {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 10px;
-}
-
-.footer-links a {
-    color: #bbb;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
+.footer-contact a:hover {
     color: #f7a01d;
 }
 
-/* Redes Sociais */
 .social-links a {
     color: #fff;
     font-size: 1.5em;
@@ -403,7 +401,6 @@ footer {
     color: #f7a01d;
 }
 
-/* Base do Rodapé */
 .footer-bottom {
     background-color: #0b1a2a;
     text-align: center;
@@ -412,21 +409,16 @@ footer {
     border-top: 1px solid #1a2b3d;
 }
 
-/* ---------------------------------------------------- */
-/* CORREÇÃO DE CENTRALIZAÇÃO PARA RESPONSIVIDADE (MOBILE) */
-/* ---------------------------------------------------- */
-
 @media (max-width: 768px) {
     .footer-col {
         flex-basis: 100%;
-        text-align: center; /* ESTA É A MÁGICA: Centraliza TUDO na coluna */
+        text-align: center;
     }
     
-    /* Esta regra é necessária para alinhar o conteúdo de contato de forma organizada */
     .footer-contact p {
         margin-left: auto;
         margin-right: auto;
-        max-width: 300px; /* Limita a largura para melhor leitura */
+        max-width: 300px;
     }
 
     .social-links {
@@ -434,137 +426,27 @@ footer {
     }
 }
 
-/* ---------------------------------------------------- */
-/* ESTILOS PARA O MODAL DE TELEFONE (Pop-up) */
-/* ---------------------------------------------------- */
-
-/* Base do Modal */
 .call-modal {
-    display: none; /* ISTO FAZ ELE INICIAR ESCONDIDO! */
-    position: fixed; 
-    z-index: 500; /* Garante que fique acima de tudo */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.8); /* Fundo semi-transparente escuro */
-    padding-top: 50px;
-}
-
-.call-modal .modal-content {
-    background-color: #0d1e31; /* Fundo escuro do quiosque */
-    color: #fff;
-    /* CENTRALIZAÇÃO E TAMANHO */
-    margin: 15% auto; 
-    padding: 30px;
-    border-radius: 8px;
-    width: 90%; 
-    max-width: 400px; /* Limita o tamanho máximo da caixa */
-    text-align: center;
-    position: relative;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
-}
-
-.close-btn-phone {
-    color: #f7a01d;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    cursor: pointer;
-}
-
-.close-btn-phone:hover,
-.close-btn-phone:focus {
-    color: #fff;
-    text-decoration: none;
-}
-
-.call-modal h2 {
-    color: #f7a01d;
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 15px;
-}
-
-.call-now-btn {
-    display: block;
-    width: 80%;
-    margin: 0 auto 20px;
-    padding: 15px;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    background-color: #f7a01d;
-    color: #0d1e31;
-    transition: background-color 0.3s;
-}
-
-.call-now-btn:hover {
-    background-color: #fff;
-}
-
-.small-text {
-    font-size: 0.8em;
-    color: #888;
-}
-
-/* ---------------------------------------------------- */
-/* ESTILOS PARA O MODAL DE TELEFONE (Pop-up) */
-/* ---------------------------------------------------- */
-
-/* Base do Modal */
-.call-modal {
-    display: none; /* ISTO É O QUE FAZ ELE INICIAR ESCONDIDO! */
-    position: fixed; 
-    z-index: 500; 
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.8); /* Fundo semi-transparente escuro */
-    padding-top: 50px;
-}
-
-/* ---------------------------------------------------- */
-/* ESTILOS PARA O MODAL DE TELEFONE (Pop-up) */
-/* ---------------------------------------------------- */
-
-/* ---------------------------------------------------- */
-/* ESTILOS PARA O MODAL DE TELEFONE (Pop-up) */
-/* ---------------------------------------------------- */
-
-/* Base do Modal */
-.call-modal {
-    /* 🚨 ESTA LINHA É A ÚNICA RESPONSÁVEL POR ELE INICIAR ESCONDIDO! */
     display: none; 
-    
-    /* Regras de fixação na tela (para que ele não vá para o final da página) */
     position: fixed; 
-    z-index: 500; 
+    z-index: 500;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    
     overflow: auto;
-    background-color: rgba(0,0,0,0.8); /* Fundo semi-transparente escuro */
+    background-color: rgba(0,0,0,0.8);
     padding-top: 50px;
 }
 
 .call-modal .modal-content {
-    background-color: #0d1e31; 
+    background-color: #0d1e31;
     color: #fff;
-    /* Centralização */
     margin: 15% auto; 
     padding: 30px;
     border-radius: 8px;
     width: 90%; 
-    max-width: 400px; 
+    max-width: 400px;
     text-align: center;
     position: relative;
     box-shadow: 0 5px 15px rgba(0,0,0,0.6);
@@ -616,21 +498,15 @@ footer {
     color: #888;
 }
 
-/* ... (Seu código CSS anterior) ... */
-
-/* Estilos para o Menu de Destaque (continuação) */
-
-/* Contêiner dos botões de filtro */
 .menu-filters {
     margin-bottom: 30px;
 }
 
-/* Estilo para os botões de filtro (abas) */
 .btn-tab {
     display: inline-block;
     padding: 10px 20px;
     margin: 0 10px;
-    background-color: #1a2b3d; /* Cor de fundo dos itens de menu */
+    background-color: #1a2b3d;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -644,27 +520,152 @@ footer {
     color: #0b1a2a;
 }
 
-/* Estado ativo do botão */
 .btn-tab.active {
     background-color: #f7a01d;
     color: #0b1a2a;
-    pointer-events: none; /* Desativa o clique no botão já ativo */
+    pointer-events: none;
 }
 
-/* Classe para esconder o conteúdo - ESSENCIAL PARA O JAVASCRIPT */
 .hidden {
     display: none !important;
 }
 
-/* Estilos para o menu-item img (PARA RESOLVER O PROBLEMA DO TAMANHO) */
-.menu-item img {
-    max-width: 100%;
-    /* Adicionando limite de altura para uniformidade visual */
-    max-height: 180px; 
-    width: auto; /* Mantém a largura automática para se ajustar a max-height */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer, cortando se necessário */
-    border-radius: 5px;
-    margin-bottom: 15px;
+.history-page {
+    padding: 60px 0;
+    background-color: #0b1a2a;
 }
 
-/* ... (Seu código CSS restante) ... */
+.history-page h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    color: #f7a01d;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-top: 20px;
+}
+
+.history-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    gap: 40px;
+}
+
+.history-section:nth-child(even) { 
+    flex-direction: row-reverse;
+}
+
+.history-section img {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.history-section .text-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.history-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #f7a01d;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.history-section p {
+    color: #eee;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.current-quiosque-section {
+    text-align: center; 
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.current-quiosque-section img {
+    max-width: 90%; 
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    margin-bottom: 30px; 
+}
+
+.current-quiosque-section .text-content {
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.current-quiosque-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #f7a01d;
+    font-size: 2.5em; 
+    margin-bottom: 20px;
+}
+
+.current-quiosque-section p {
+    color: #eee;
+    font-size: 1.2em; 
+    line-height: 1.8;
+}
+
+@media (max-width: 992px) {
+    .history-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .history-section:nth-child(even) {
+        flex-direction: column; 
+    }
+    .history-section img,
+    .history-section .text-content {
+        max-width: 90%; 
+        flex: none;
+    }
+    .history-section img {
+        margin-bottom: 30px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .history-page h1 {
+        font-size: 2.5em;
+    }
+    .history-section h2 {
+        font-size: 1.8em;
+    }
+    .history-section p {
+        font-size: 1em;
+    }
+    .current-quiosque-section h2 {
+        font-size: 2em;
+    }
+    .current-quiosque-section p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .history-page h1 {
+        font-size: 2em;
+    }
+    .history-section h2 {
+        font-size: 1.5em;
+    }
+    .history-section p {
+        font-size: 0.95em;
+    }
+    .current-quiosque-section img {
+        max-width: 100%;
+    }
+    .current-quiosque-section h2 {
+        font-size: 1.8em;
+    }
+    .current-quiosque-section p {
+        font-size: 1em;
+    }
+}

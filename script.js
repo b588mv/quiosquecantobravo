@@ -1,19 +1,15 @@
-// script.js - Lógica de Modal e Abas (Tabs) para o Menu de Destaque
-
 document.addEventListener('DOMContentLoaded', () => {
     
     const phoneModal = document.getElementById("phoneModal");
     const closeBtn = document.getElementsByClassName("close-btn-phone")[0];
     
-    // Botões que abrirão o modal: o ícone/telefone do header E o link 'Contato' da nav bar
     const openBtns = [
-        document.getElementById("openPhoneModal"),        // Se houver um ícone/número fixo no topo
-        document.getElementById("openPhoneModalNav")      // O link 'Contato' da navegação
-    ].filter(btn => btn != null); // Filtra os nulos caso algum não exista no HTML
+        document.getElementById("openPhoneModal"),        
+        document.getElementById("openPhoneModalNav")      
+    ].filter(btn => btn != null); 
 
-    // 1. Lógica do Modal de Contato
     if (phoneModal) {
-        // Abrir modal
+        // Abrir o velho barreiro
         openBtns.forEach(btn => {
             btn.onclick = function(e) {
                 e.preventDefault(); 
@@ -21,14 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Fechar com o X
+        // Fechar com xizinho
         if (closeBtn) {
             closeBtn.onclick = function() {
                 phoneModal.style.display = "none";
             }
         }
 
-        // Fechar clicando fora
+        // Fechar clicando fora do seu joca
         window.onclick = function(event) {
             if (event.target == phoneModal) {
                 phoneModal.style.display = "none";
@@ -37,23 +33,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // -----------------------------------------------------------------
-    // LÓGICA: ABAS (TABS) PARA PRATOS E DRINKS
-    // -----------------------------------------------------------------
     const btnPratos = document.getElementById('btn-pratos');
     const btnDrinks = document.getElementById('btn-drinks');
     const contentPratos = document.getElementById('content-pratos');
     const contentDrinks = document.getElementById('content-drinks');
 
     function switchTab(targetTab) {
-        // Verifica se os elementos existem antes de tentar manipular as classes
         if (!btnPratos || !btnDrinks || !contentPratos || !contentDrinks) return;
         
-        // Remove 'active' de todos os botões e adiciona ao botão clicado
         btnPratos.classList.remove('active');
         btnDrinks.classList.remove('active');
         
-        // Esconde todo o conteúdo
         contentPratos.classList.add('hidden');
         contentDrinks.classList.add('hidden');
         
@@ -66,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Adiciona o evento de clique nos botões
     if (btnPratos) {
         btnPratos.addEventListener('click', () => switchTab('pratos'));
     }
@@ -75,6 +64,38 @@ document.addEventListener('DOMContentLoaded', () => {
         btnDrinks.addEventListener('click', () => switchTab('drinks'));
     }
 
-    // Garante que a aba de Pratos seja exibida por padrão ao carregar a página
     switchTab('pratos');
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            
+            if (this.id === 'openPhoneModalNav' || this.id === 'openPhoneModal') {
+                return; 
+            }
+            
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            
+            if (targetId === '#') {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            } else {
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                     const headerOffset = 75; 
+                     const elementPosition = targetElement.getBoundingClientRect().top;
+                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                     window.scrollTo({
+                         top: offsetPosition,
+                         behavior: 'smooth'
+                     });
+                }
+            }
+        });
+    });
 });
