@@ -284,57 +284,25 @@ body {
 
 
 @media (max-width: 768px) {
+    .fixed-corner-deco {
+        display: none; 
+    }
     
     .header-content {
-        /* Garante que o Logo, Nav e Info fiquem um abaixo do outro */
         flex-direction: column;
         text-align: center;
-        /* Adiciona um pouco de espaço extra para o conteúdo não ficar apertado */
-        padding: 10px 0; 
     }
-    
-    .logo {
-        /* Garante que o logo não seja muito grande */
-        max-width: 150px; 
-        margin: 0 auto;
-    }
-    
-    .main-nav {
-        /* Ocupa a largura total para centralizar os links */
-        width: 100%; 
-        margin-top: 10px;
-    }
-    
     .main-nav ul {
-        margin-top: 0;
+        margin-top: 15px;
         flex-wrap: wrap;
         justify-content: center;
-        /* Adiciona margem vertical para separar a navegação do logo e info */
-        margin-bottom: 5px; 
     }
-    
-    /* 💥 NOVO: Diminui a fonte para caber mais itens */
-    .main-nav ul li a {
-        font-size: 0.9em; 
-        padding: 5px 8px; /* Reduz o padding para diminuir a área clicável */
-    }
-    
-    /* 💥 NOVO: Reduz o espaço entre os links */
     .main-nav ul li {
-        margin: 0 5px; 
-        display: inline-block;
+        margin: 5px 10px;
     }
-    
     .header-info {
-        margin-top: 10px;
-        /* Garante que o telefone fique centralizado */
-        width: 100%;
-        text-align: center;
-        font-size: 0.9em; /* Diminui a fonte do telefone também */
+        margin-top: 15px;
     }
-
-    /* ... Mantenha o restante da sua media query para outros elementos do site ... */
-}
     .hero-content .title {
         font-size: 2.5em;
     }
